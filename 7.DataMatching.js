@@ -29,6 +29,15 @@
   ];
 
 
-  let dataMatch= data.filter((e)=> colors.indexOf(e.color)!==-1);
+  const dataMatch= data.filter((e)=> colors.indexOf(e.color)!==-1);
 
   console.log(dataMatch);
+
+  const dataMatchUsingReduce=data.reduce((acc,cur)=>{
+    if(colors.includes(cur.color)){
+        acc.push(cur);
+    }
+    return acc;
+  },[]);
+
+  console.log("Reduce",dataMatchUsingReduce );
