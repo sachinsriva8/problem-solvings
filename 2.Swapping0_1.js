@@ -13,11 +13,11 @@
 let swappingZeroAtEnd=(arr)=>{
     let i=0;
     let j=1;
-    let temp=0;
+    // let temp=0;
     while(j<arr.length){
         if(arr[i]==0){
             if(arr[i]!==arr[j]){
-                temp=arr[j];
+                let temp=arr[j];
                 arr[j]=arr[i];
                 arr[i]=temp;
                 // console.log(arr, i,j);
